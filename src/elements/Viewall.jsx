@@ -13,7 +13,7 @@ const Viewall = () => {
 
   const [cardData,setData]=useState([]);
   useEffect(()=>{
-    axiosInstance.get('http://127.0.0.1:4000/blogs/getPost').then((res)=>{
+    axiosInstance.get('http://54.159.167.39:4000/blogs/getPost').then((res)=>{
       setData(...cardData,res.data);
       console.log(cardData);
     })
@@ -22,7 +22,7 @@ const Viewall = () => {
   const removeHandler = (id)=>{
     //alert(id);
     console.log(id);
-    axiosInstance.delete('http://127.0.0.1:4000/blogs/remove/'+id).then((res)=>{
+    axiosInstance.delete('http://54.159.167.39:4000/blogs/remove/'+id).then((res)=>{
       alert(res.data);
     })
   }
