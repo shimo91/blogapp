@@ -16,7 +16,7 @@ const AddPost = (props) => {
   const addHandler = ()=>{
     if(props.method==="put"){
       console.log("id is :"+props.data._id)
-      axiosInstance.put("http://127.0.0.1:4000/blogs/update/"+props.data._id,form)
+      axiosInstance.put("http://54.159.167.39:4000/blogs/update/"+props.data._id,form)
       .then((response)=>{
        
         if (response.data==="Updated successfully") {
@@ -32,7 +32,7 @@ const AddPost = (props) => {
     else
     {
       //console.log(post);
-      axiosInstance.post('http://127.0.0.1:4000/blogs/addPost',form).then((res)=>{
+      axiosInstance.post('http://54.159.167.39:4000/blogs/addPost',form).then((res)=>{
         alert(res.data);
       })
     }
