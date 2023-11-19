@@ -9,7 +9,7 @@ const Myprofile = () => {
 
   const [cardData,setData]=useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:4000/user/getUser').then((res)=>{
+    axios.get('http://54.159.167.39:4000/user/getUser').then((res)=>{
       setData(...cardData,res.data);
       console.log(cardData.name);
     })
@@ -18,7 +18,7 @@ const Myprofile = () => {
   const removeHandler = (id)=>{
     //alert(id);
     console.log(id);
-    axios.delete('http://localhost:4000/user/remove/'+id).then((res)=>{
+    axios.delete('http://54.159.167.39:4000/user/remove/'+id).then((res)=>{
       alert(res.data);
     })
   }
