@@ -17,7 +17,7 @@ const Signup = () => {
   } 
   const addHandler = ()=>{
     console.log(user);
-    axios.post('http://localhost:4000/user/addUser',user).then((res)=>{
+    axios.post('http://54.159.167.39:4000/user/addUser',user).then((res)=>{
       alert(res.data);
     })
   }
